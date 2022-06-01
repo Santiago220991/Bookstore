@@ -1,0 +1,42 @@
+.addBookdiv{
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+    border-top: 1px solid #e8e8e8;
+    margin-bottom: 20px;
+}
+
+#addtitle{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color:#888888;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bookname{
+    width: 35.5rem;
+    height: 2.513rem;
+    border-radius: 3px;
+    border: 1px solid #e8e8e8;
+}
+
+#bookauthor{
+    width: 15.813rem;
+    height: 2.513rem;
+    border-radius: 3px;
+    border: 1px solid #e8e8e8;
+}
+
+#add{
+    background-color: #0290ff;
+    border-radius: 3px;
+    border: none;
+    font-weight: 300;
+    color:white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 11.5rem;
+}
