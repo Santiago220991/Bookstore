@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Bookstore Live Demo in Heroku](https:)
+[Bookstore Live Demo](https:)
 
 
 ## Getting Started
