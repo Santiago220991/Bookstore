@@ -1,0 +1,27 @@
+.title {
+  margin-top: 10%;
+  padding-left: 12%;
+  padding-right: 8%;
+  font-size: 32px;
+  font-weight: bolder;
+  animation-name: entering;
+  animation-duration: 1s;
+}
+
+.txt {
+  padding-left: 12%;
+  padding-right: 9%;
+  font-weight: 700;
+  animation-name: entering;
+  animation-duration: 1s;
+}
+
+@keyframes entering {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
