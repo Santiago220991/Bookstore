@@ -1,17 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
+import profile from './profile.png';
 
 const Navbar = () => (
   <nav>
-    <div className="logo">Math Magicians</div>
     <div className="menu">
       <ul>
-        <li key={1} className="home"><Link to="/">Home</Link></li>
-        <li key={2} className="navcalc"><Link to="calculator">Calculator</Link></li>
-        <li key={3} className="quote"><Link to="quote">Quote</Link></li>
+        <li id="logo">Bookstores CMS</li>
+        <li id="books">BOOKS</li>
+        <li id="categories">CATEGORIES</li>
       </ul>
     </div>
+    <div><img className="login" src={profile} alt="profile logo" /></div>
   </nav>
 );
+
 export default Navbar;

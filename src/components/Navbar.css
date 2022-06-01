@@ -1,48 +1,45 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-top: 1%;
-  background-color: antiquewhite;
-  animation-name: showing;
-  animation-duration: 2s;
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #e8e8e8;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    margin-bottom: 2.232rem;
+}
+.menu{
+    display: flex;
 }
 
-.logo {
-  font-size: 38px;
-  font-weight: bolder;
+.menu ul{
+    display: flex;
+    column-gap: 20px;
+    padding-left: 0;
 }
 
-.menu ul {
-  display: flex;
-  padding-left: 0;
-  column-gap: 20px;
-  font-size: 16px;
+.menu li{
+    display: flex;
+    list-style: none;
+    align-items: center;
 }
 
-.home {
-  border-right: solid 1px black;
-  padding-right: 20px;
+#logo{
+    font-size: 1.875rem;
+    color: #0290ff;
+    font-weight: bold;
 }
 
-.navcalc {
-  border-right: solid 1px black;
-  padding-right: 20px;
+#books{
+    font-size: 0.813rem;
+    
 }
 
-.menu ul li {
-  display: flex;
-  list-style: none;
+#categories{
+    font-size: 0.813rem;
+    opacity: 0.5;
 }
 
-@keyframes showing {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.login{
+    width: 2.25rem;
+    height: 2.25rem;
 }
