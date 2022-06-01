@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Book from './components/Book';
-import AddBook from './components/AddBook';
+//  import AddBook from './components/AddBook';
 import Navbar from './components/Navbar';
 import Categories from './components/Categories';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Navbar />
-    <Book title="The Hunger Games" author="Suzanne Collins" />
-    <Book title="Dune" author="Frank Herbert" />
-    <Book title="Capital in the Twenty-First Century" author="Suzanne Collins" />
-    <AddBook />
-    <Categories />
-  </React.StrictMode>,
+  <Router>
+    <React.StrictMode>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={(<Book title="The Hunger Games" author="Suzanne Collins" />)} />
+        <Route path="Categories" element={<Categories />} />
+      </Routes>
+    </React.StrictMode>
+  </Router>,
 );
