@@ -1,13 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicians
+# Bookstore
 
-> **This is a webpage that shows a functional calculator with the next basic functions.**
+> **This is a Bookstore webpage, it shows a booklist with the next features.**
 
-- Addition **+** 
-- Sustraction **-**
-- Multiplication **x** 
-- Divison **÷**
+- Show book's title, author and category.
+- Add a new book.
 
 
 ## Built With
@@ -19,9 +17,8 @@
 
 ## Live Demo
 
-[Math Magicians Live Demo in Heroku](https://math-magicians-santiago.herokuapp.com/)
+[Bookstore Live Demo in Heroku](https:)
 
-[Math Magicians Live Demo in Netlify](https://bespoke-madeleine-424ee3.netlify.app/)
 
 ## Getting Started
 
@@ -48,7 +45,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Santiago220991/math-magicians/issues).
+Feel free to check the [issues page](https://github.com/Santiago220991/Bookstore/issues).
 
 ## Acknowledgments
 
