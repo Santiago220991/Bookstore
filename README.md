@@ -7,6 +7,7 @@
 - Show book's title, author and category.
 - Add a new book.
 
+![Bookstore](https://user-images.githubusercontent.com/98363075/171963586-d0474514-636e-4b8d-aa9d-1eef5968df8e.png)
 
 ## Built With
 
