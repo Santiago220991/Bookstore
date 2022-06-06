@@ -6,6 +6,7 @@
 
 - Show book's title, author and category.
 - Add a new book.
+- Remove a book.
 
 ![Bookstore](https://user-images.githubusercontent.com/98363075/171963586-d0474514-636e-4b8d-aa9d-1eef5968df8e.png)
 
@@ -31,7 +32,7 @@ To get a local copy up and running follow these simple example steps.
 - Clone the repository using the next link: https://github.com/Santiago220991/math-magicians.git
 - With your code editor open the folder where you cloned the project.
 - In your code editor terminal run `npm install` to install all the dependencies needed.
-- In your code editor terminal run `npm run start` to start the local server.
+- In your code editor terminal run `npm start` to start the local server.
 
 
 ## Author
