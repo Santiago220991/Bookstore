@@ -5,7 +5,7 @@ const Book = (state, action) => {
   switch (action.type) {
     case ADD:
       return [...state, {
-        id: state.lenght,
+        id: state.length,
         title: action.payload.title,
         author: action.payload.author,
       }];
