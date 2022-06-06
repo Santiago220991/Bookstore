@@ -1,7 +1,7 @@
 const ADD = 'Bookstore/books/ADD';
 const REMOVE = 'Bookstore/books/REMOVE';
 
-const book = (state, action) => {
+const Book = (state, action) => {
   switch (action.type) {
     case ADD:
       return [...state, {
@@ -26,4 +26,4 @@ export const RemoveBook = (id) => ({
   payload: id,
 });
 
-export default book;
+export default Book;
