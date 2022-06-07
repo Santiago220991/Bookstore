@@ -3,9 +3,11 @@ import React from 'react';
 import './Book.css';
 
 const Book = (props) => {
-  const { title, author } = props;
+  const {
+    key, id, title, author,
+  } = props;
   return (
-    <div className="book">
+    <div className="book" id={id} key={key}>
       <div className="info">
         <p className="action">Action</p>
         <p className="title">{title}</p>
