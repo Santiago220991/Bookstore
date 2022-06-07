@@ -7,6 +7,10 @@ import BookList from './components/BookList';
 import Navbar from './components/Navbar';
 import Categories from './components/Categories';
 import './index.css';
+//  import { list } from './redux/books/books';
+
+/*  const dispatch = useDispatch();
+dispatch(list()); */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
