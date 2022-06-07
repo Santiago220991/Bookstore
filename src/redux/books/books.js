@@ -2,12 +2,12 @@ const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const initState = [
   {
-    id: 0,
+    id: '0',
     title: 'The Hunger Games',
     author: 'Suzanne Collins',
   },
   {
-    id: 1,
+    id: '1',
     title: 'Frank Herbert',
     author: 'Dune',
   },
