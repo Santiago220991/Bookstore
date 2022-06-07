@@ -16,14 +16,14 @@ form {
   justify-content: space-between;
 }
 
-#bookname {
+#title {
   width: 35.5rem;
   height: 2.513rem;
   border-radius: 3px;
   border: 1px solid #e8e8e8;
 }
 
-#bookauthor {
+#author {
   width: 15.813rem;
   height: 2.513rem;
   border-radius: 3px;

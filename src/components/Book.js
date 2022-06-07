@@ -4,10 +4,10 @@ import './Book.css';
 
 const Book = (props) => {
   const {
-    key, id, title, author,
+    id, title, author,
   } = props;
   return (
-    <div className="book" id={id} key={key}>
+    <div className="book" id={id} key={id}>
       <div className="info">
         <p className="action">Action</p>
         <p className="title">{title}</p>
