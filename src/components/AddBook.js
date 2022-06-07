@@ -17,6 +17,10 @@ const AddBook = () => {
   const addnewbook = (e) => {
     e.preventDefault();
     dispatch(BookAdd(info));
+    const titleinput = document.querySelector('#title');
+    const authorinput = document.querySelector('#author');
+    titleinput.value = '';
+    authorinput.value = '';
   };
 
   const onChange = (e) => {
