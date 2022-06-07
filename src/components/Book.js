@@ -1,18 +1,28 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import './Book.css';
+import { useDispatch } from 'react-redux';
+import { RemoveBook } from '../redux/books/books';
 
 const Book = (props) => {
-  const { title, author } = props;
+  const dispatch = useDispatch();
+
+  const bookremove = (e) => {
+    dispatch(RemoveBook(e.target.closest('.book').id));
+  };
+
+  const {
+    id, title, author,
+  } = props;
   return (
-    <div className="book">
+    <div className="book" id={id} key={id}>
       <div className="info">
         <p className="action">Action</p>
         <p className="title">{title}</p>
         <p className="author">{author}</p>
         <ul>
           <li className="comments">Comments</li>
-          <li>Remove</li>
+          <li><button type="button" onClick={bookremove}>Remove</button></li>
           <li className="edit">Edit</li>
         </ul>
       </div>

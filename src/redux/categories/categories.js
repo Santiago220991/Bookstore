@@ -1,6 +1,6 @@
 const CONSTRUCTION = 'Bookstore/categories/CONSTRUCTION';
 
-const Check = (state = [], action) => {
+const Check = (state = '', action) => {
   switch (action.type) {
     case CONSTRUCTION:
       return 'UNDER CONSTRUCTION';
@@ -9,6 +9,6 @@ const Check = (state = [], action) => {
   }
 };
 
-export const Categories = () => ({ type: CONSTRUCTION });
+export const building = () => ({ type: CONSTRUCTION });
 
 export default Check;
