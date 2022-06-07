@@ -9,11 +9,12 @@ const Categories = () => {
 
   const showmessage = () => {
     dispatch(building());
+    document.querySelector('#msg').classList.add('message');
   };
   return (
-    <div>
+    <div id="categoriespage">
       <button className="categoriesbtn" type="button" onClick={showmessage}>Check Status</button>
-      <div id="message">{message}</div>
+      <div id="msg">{message}</div>
     </div>
   );
 };
