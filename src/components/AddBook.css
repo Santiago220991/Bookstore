@@ -42,10 +42,10 @@ form {
   cursor: pointer;
 }
 
-#add:hover{
-  background-color: #0a3e66;
+#add:hover {
+  background-color: #1572b9;
 }
 
-#add:active{
+#add:active {
   background-color: #0290ff;
 }

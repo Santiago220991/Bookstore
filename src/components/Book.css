@@ -12,11 +12,12 @@
 }
 
 @keyframes showing {
-  from{
+  from {
     transform: scale(0);
   }
-  to{
-    transoform: scale(1);
+
+  to {
+    transform: scale(1);
   }
 }
 
@@ -78,7 +79,6 @@ a {
   background-color: transparent;
   padding: 0;
   cursor: pointer;
-  align-items: bottom;
 }
 
 .edit {
@@ -140,11 +140,10 @@ a {
   color: white;
 }
 
-.circular-unit-0{
-  display:none;
+.circular-unit-0 {
+  display: none;
 }
 
-.circular-percent-0{
-  display:none;
+.circular-percent-0 {
+  display: none;
 }
-
