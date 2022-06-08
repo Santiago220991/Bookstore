@@ -12,7 +12,7 @@ const Categories = () => {
     document.querySelector('#msg').classList.add('message');
   };
   return (
-    <div id="categoriespage">
+    <div className="categoriespage">
       <button className="categoriesbtn" type="button" onClick={showmessage}>Check Status</button>
       <div id="msg">{message}</div>
     </div>

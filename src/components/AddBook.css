@@ -5,7 +5,7 @@
   margin-bottom: 20px;
 }
 
-#addtitle {
+.addtitle {
   font-size: 1.25rem;
   font-weight: bold;
   color: #888;
@@ -30,7 +30,7 @@ form {
   border: 1px solid #e8e8e8;
 }
 
-#add {
+.add {
   background-color: #0290ff;
   border-radius: 3px;
   border: none;
@@ -40,4 +40,12 @@ form {
   padding-right: 0.5rem;
   width: 11.5rem;
   cursor: pointer;
+}
+
+.add:hover {
+  background-color: #1572b9;
+}
+
+.add:active {
+  background-color: #0290ff;
 }
