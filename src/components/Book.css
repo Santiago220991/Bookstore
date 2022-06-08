@@ -7,6 +7,17 @@
   border-radius: 4px;
   margin-left: 6.25rem;
   margin-right: 6.25rem;
+  animation-name: showing;
+  animation-duration: 1s;
+}
+
+@keyframes showing {
+  from{
+    transform: scale(0);
+  }
+  to{
+    transoform: scale(1);
+  }
 }
 
 .info {
