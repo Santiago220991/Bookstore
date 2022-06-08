@@ -41,3 +41,11 @@ form {
   width: 11.5rem;
   cursor: pointer;
 }
+
+#add:hover{
+  background-color: #0a3e66;
+}
+
+#add:active{
+  background-color: #0290ff;
+}
