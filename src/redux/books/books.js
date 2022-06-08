@@ -47,12 +47,38 @@ export const list = () => async (dispatch) => {
       {
         id: ids[index],
         title: element[0].title,
-        author: values[0].author,
+        author: element[0].author,
         category: 'Action',
       },
     );
   });
   dispatch(getlist(listbook));
+};
+
+export const ApiAddBook = (info) => async (dispatch) => {
+  const response = await fetch(URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(
+      {
+        item_id: info.id,
+        title: info.title,
+        author: info.author,
+        category: 'Adventure',
+      },
+    ),
+  });
+  if (response.status === 201) {
+    dispatch(BookAdd(info));
+  }
+};
+
+export const ApiRemoveBook = (id) => async (dispatch) => {
+  console.log(URL + { id });
+  const response = await fetch(URL + { id }, {
+    method: 'DELETE',
+  });
+  console.log(response);
 };
 
 export default Bookreducer;
