@@ -30,13 +30,13 @@ const AddBook = () => {
   return (
     <div className="addBookdiv">
       <div>
-        <p id="addtitle">ADD NEW BOOK</p>
+        <p className="addtitle">ADD NEW BOOK</p>
       </div>
       <div>
         <form onSubmit={addnewbook} action="">
           <input id="title" placeholder="   Book Title" onChange={onChange} required />
           <input id="author" placeholder="   Author" onChange={onChange} required />
-          <button id="add" type="submit">ADD BOOK</button>
+          <button className="add" type="submit">ADD BOOK</button>
         </form>
       </div>
     </div>

@@ -24,17 +24,17 @@ nav {
   align-items: center;
 }
 
-#logo {
+.logo {
   font-size: 1.875rem;
   color: #0290ff;
   font-weight: bold;
 }
 
-#books {
+.books {
   font-size: 0.813rem;
 }
 
-#categories {
+.categories {
   font-size: 0.813rem;
   opacity: 0.5;
 }
