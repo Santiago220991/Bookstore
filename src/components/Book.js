@@ -28,7 +28,7 @@ const Book = (props) => {
         <p className="author">{author}</p>
         <ul>
           <li className="comments">Comments</li>
-          <li><button type="button" onClick={bookremove}>Remove</button></li>
+          <li><button className="remove" type="button" onClick={bookremove}>Remove</button></li>
           <li className="edit">Edit</li>
         </ul>
       </div>
