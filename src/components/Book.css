@@ -71,6 +71,7 @@ a {
 .percentdiv {
   border-right: solid 1px #cecccc;
   padding-right: 4.93rem;
+  padding-left: 20px;
 }
 
 .percent {
@@ -115,3 +116,12 @@ a {
   font-weight: 300;
   color: white;
 }
+
+.circular-unit-0{
+  display:none;
+}
+
+.circular-percent-0{
+  display:none;
+}
+

@@ -1,11 +1,12 @@
 {
-  "name": "math-magicians",
+  "name": "bookstore",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "@tomik23/react-circular-progress-bar": "^1.1.1",
     "big-js": "^3.1.3",
     "big.js": "^6.1.1",
     "react": "^18.1.0",

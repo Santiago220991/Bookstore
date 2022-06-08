@@ -2,7 +2,13 @@
 import React from 'react';
 import './Book.css';
 import { useDispatch } from 'react-redux';
+import { CircularProgressBar } from '@tomik23/react-circular-progress-bar';
 import { ApiRemoveBook } from '../redux/books/books';
+
+const config = {
+  percent: 75,
+  size: 80,
+};
 
 const Book = (props) => {
   const dispatch = useDispatch();
@@ -10,11 +16,11 @@ const Book = (props) => {
   const bookremove = (e) => {
     dispatch(ApiRemoveBook(e.target.closest('.book').id));
   };
-
   const {
     id, title, author,
   } = props;
   return (
+
     <div className="book" id={id} key={id}>
       <div className="info">
         <p className="action">Action</p>
@@ -27,9 +33,9 @@ const Book = (props) => {
         </ul>
       </div>
       <div className="completed">
-        <div>Image</div>
+        <CircularProgressBar percent={config.percent} size={config.size} />
         <div className="percentdiv">
-          <p className="percent">80%</p>
+          <p className="percent">{`${config.percent}%`}</p>
           <p className="completed-text">Completed</p>
         </div>
       </div>
