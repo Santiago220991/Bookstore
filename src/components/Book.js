@@ -2,13 +2,13 @@
 import React from 'react';
 import './Book.css';
 import { useDispatch } from 'react-redux';
-import { RemoveBook } from '../redux/books/books';
+import { ApiRemoveBook } from '../redux/books/books';
 
 const Book = (props) => {
   const dispatch = useDispatch();
 
   const bookremove = (e) => {
-    dispatch(RemoveBook(e.target.closest('.book').id));
+    dispatch(ApiRemoveBook(e.target.closest('.book').id));
   };
 
   const {

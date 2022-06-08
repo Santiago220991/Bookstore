@@ -1,17 +1,9 @@
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
-const initState = [
-  {
-    id: '0',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-  },
-  {
-    id: '1',
-    title: 'Frank Herbert',
-    author: 'Dune',
-  },
-];
+const GET_BOOK = 'bookstore/books/GET_BOOK';
+const initState = [];
+const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JaCeEb2PP7Tzrh2kEScl/books';
+
 const Bookreducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_BOOK:
@@ -19,9 +11,12 @@ const Bookreducer = (state = initState, action) => {
         id: action.payload.id,
         title: action.payload.title,
         author: action.payload.author,
+        category: 'Action',
       }];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload);
+    case GET_BOOK:
+      return action.payload;
     default:
       return state;
   }
@@ -36,5 +31,59 @@ export const RemoveBook = (id) => ({
   type: REMOVE_BOOK,
   payload: id,
 });
+
+export const getlist = (list) => ({
+  type: GET_BOOK,
+  payload: list,
+});
+
+export const list = () => async (dispatch) => {
+  const listbook = [];
+  const response = await fetch(URL);
+  const responsearr = await response.json();
+  const [ids, values] = [Object.keys(responsearr), Object.values(responsearr)];
+  values.forEach((element, index) => {
+    listbook.push(
+      {
+        id: ids[index],
+        title: element[0].title,
+        author: element[0].author,
+        category: 'Action',
+      },
+    );
+  });
+  dispatch(getlist(listbook));
+};
+
+export const ApiAddBook = (info) => async (dispatch) => {
+  const response = await fetch(URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(
+      {
+        item_id: info.id,
+        title: info.title,
+        author: info.author,
+        category: 'Adventure',
+      },
+    ),
+  });
+  if (response.status === 201) {
+    dispatch(BookAdd(info));
+  }
+};
+
+export const ApiRemoveBook = (id) => async (dispatch) => {
+  const response = await fetch(URL.concat('/').concat(id), {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      item_id: id,
+    }),
+  });
+  if (response.status === 201) {
+    dispatch(RemoveBook(id));
+  }
+};
 
 export default Bookreducer;

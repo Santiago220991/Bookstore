@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './AddBook.css';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { BookAdd } from '../redux/books/books';
+import { ApiAddBook } from '../redux/books/books';
 
 const AddBook = () => {
   const [value, setValue] = useState({ title: '', author: '' });
@@ -16,7 +16,7 @@ const AddBook = () => {
 
   const addnewbook = (e) => {
     e.preventDefault();
-    dispatch(BookAdd(info));
+    dispatch(ApiAddBook(info));
     const titleinput = document.querySelector('#title');
     const authorinput = document.querySelector('#author');
     titleinput.value = '';
