@@ -74,11 +74,16 @@ export const ApiAddBook = (info) => async (dispatch) => {
 };
 
 export const ApiRemoveBook = (id) => async (dispatch) => {
-  console.log(URL + { id });
-  const response = await fetch(URL + { id }, {
+  const response = await fetch(URL.concat('/').concat(id), {
     method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      item_id: id,
+    }),
   });
-  console.log(response);
+  if (response.status === 201) {
+    dispatch(RemoveBook(id));
+  }
 };
 
 export default Bookreducer;
