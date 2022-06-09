@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Bookstore Live Demo](https:)
+[Bookstore Live Demo](https://magenta-begonia-1a8b2c.netlify.app/)
 
 
 ## Getting Started
