@@ -8,7 +8,8 @@
 - Add a new book.
 - Remove a book.
 
-![Bookstore](https://user-images.githubusercontent.com/98363075/171963586-d0474514-636e-4b8d-aa9d-1eef5968df8e.png)
+![Bookstore](https://user-images.githubusercontent.com/98363075/172751726-2f893c76-864f-45f7-9045-845d1b3332f4.png)
+
 
 ## Built With
 
