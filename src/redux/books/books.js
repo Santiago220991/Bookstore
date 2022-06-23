@@ -11,7 +11,7 @@ const Bookreducer = (state = initState, action) => {
         id: action.payload.id,
         title: action.payload.title,
         author: action.payload.author,
-        category: 'Action',
+        category: action.payload.category,
       }];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload);
@@ -48,7 +48,7 @@ export const list = () => async (dispatch) => {
         id: ids[index],
         title: element[0].title,
         author: element[0].author,
-        category: 'Action',
+        category: element[0].category,
       },
     );
   });
@@ -64,7 +64,7 @@ export const ApiAddBook = (info) => async (dispatch) => {
         item_id: info.id,
         title: info.title,
         author: info.author,
-        category: 'Adventure',
+        category: info.category,
       },
     ),
   });

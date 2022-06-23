@@ -5,13 +5,14 @@ import { useDispatch } from 'react-redux';
 import { ApiAddBook } from '../redux/books/books';
 
 const AddBook = () => {
-  const [value, setValue] = useState({ title: '', author: '' });
+  const [value, setValue] = useState({ title: '', author: '', category: '' });
   const dispatch = useDispatch();
 
   const info = {
     id: uuidv4(),
     title: value.title,
     author: value.author,
+    category: value.category,
   };
 
   const addnewbook = (e) => {
@@ -25,6 +26,7 @@ const AddBook = () => {
 
   const onChange = (e) => {
     setValue({ ...value, [e.target.id]: e.target.value });
+    console.log(value);
   };
 
   return (
@@ -36,6 +38,13 @@ const AddBook = () => {
         <form onSubmit={addnewbook} action="">
           <input id="title" placeholder="   Book Title" onChange={onChange} required />
           <input id="author" placeholder="   Author" onChange={onChange} required />
+          <select id="category" onChange={onChange}>
+            <option value="">-- Category --</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Action">Action</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Comedy">Comedy</option>
+          </select>
           <button className="add" type="submit">ADD BOOK</button>
         </form>
       </div>

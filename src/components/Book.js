@@ -17,13 +17,13 @@ const Book = (props) => {
     dispatch(ApiRemoveBook(e.target.closest('.book').id));
   };
   const {
-    id, title, author,
+    id, title, author, category,
   } = props;
   return (
 
     <div className="book" id={id} key={id}>
       <div className="info">
-        <p className="action">Action</p>
+        <p className="action">{category}</p>
         <p className="title">{title}</p>
         <p className="author">{author}</p>
         <ul>
