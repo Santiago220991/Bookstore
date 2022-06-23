@@ -17,7 +17,7 @@ const Book = (props) => {
     dispatch(ApiRemoveBook(e.target.closest('.book').id));
   };
   const {
-    id, title, author, category,
+    id, title, author, category, progress,
   } = props;
   return (
 
@@ -33,9 +33,9 @@ const Book = (props) => {
         </ul>
       </div>
       <div className="completed">
-        <CircularProgressBar percent={config.percent} size={config.size} />
+        <CircularProgressBar percent={Number(progress)} size={config.size} />
         <div className="percentdiv">
-          <p className="percent">{`${config.percent}%`}</p>
+          <p className="percent">{`${progress}%`}</p>
           <p className="completed-text">Completed</p>
         </div>
       </div>

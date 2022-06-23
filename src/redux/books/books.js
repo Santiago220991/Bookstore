@@ -12,6 +12,7 @@ const Bookreducer = (state = initState, action) => {
         title: action.payload.title,
         author: action.payload.author,
         category: action.payload.category,
+        progress: (Math.random() * 100).toFixed(0),
       }];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload);
@@ -49,6 +50,7 @@ export const list = () => async (dispatch) => {
         title: element[0].title,
         author: element[0].author,
         category: element[0].category,
+        progress: (Math.random() * 100).toFixed(0),
       },
     );
   });

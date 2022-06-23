@@ -10,7 +10,6 @@ const BookList = () => {
   useEffect(() => {
     dispatch(list());
   }, []);
-
   return (
     <div className="booklist">
       {bookslist.map((element) => (
@@ -20,6 +19,7 @@ const BookList = () => {
           title={element.title}
           author={element.author}
           category={element.category}
+          progress={element.progress}
         />
       ))}
       <AddBook />
