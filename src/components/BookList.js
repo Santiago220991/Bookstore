@@ -14,7 +14,6 @@ const BookList = () => {
   const Filtering = (e) => {
     const newfilter = { ...filter, value: e.target.value };
     setFilter(newfilter);
-    console.log(filter.value);
   };
 
   return (
