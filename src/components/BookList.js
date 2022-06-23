@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
@@ -10,9 +10,30 @@ const BookList = () => {
   useEffect(() => {
     dispatch(list());
   }, []);
+  const [filter, setFilter] = useState({ value: '' });
+  const Filtering = (e) => {
+    const newfilter = { ...filter, value: e.target.value };
+    setFilter(newfilter);
+    console.log(filter.value);
+  };
+
   return (
     <div className="booklist">
-      {bookslist.map((element) => (
+      <select className="filter" onChange={Filtering}>
+        <option value="">-- Search by category --</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Action">Action</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="Comedy">Comedy</option>
+      </select>
+      {bookslist.filter((item) => {
+        if (filter.value === '') {
+          return item;
+        } if (item.category === filter.value) {
+          return item;
+        }
+        return false;
+      }).map((element) => (
         <Book
           key={element.id}
           id={element.id}
